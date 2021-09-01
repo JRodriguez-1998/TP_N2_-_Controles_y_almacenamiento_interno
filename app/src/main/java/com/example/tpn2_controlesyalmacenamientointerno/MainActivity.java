@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerContacto.setAdapter(adapter);
         spinner2.setAdapter(adapter);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu m){
        getMenuInflater().inflate(R.menu.menu_activity,m);
