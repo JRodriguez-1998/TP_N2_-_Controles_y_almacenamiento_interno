@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">TP N°2 - Controles y almacenamiento interno</string>
+    <string name="app_name">Ejercicio controles</string>
+    <string name="titulo">FORMULARIO DE CONTACTO</string>
+    <string name="mensaje">Este es un formulario destinado al registro de personas, sus datos personales e intereses.</string>
+    <string name="tvNombre">NOMBRE</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="tvApellido">APELLIDO</string>
+    <string name="txtApellido">Apellido</string>
+    <string name="tvTelefono">TELÉFONO</string>
+    <string name="txtTelefono">Teléfono</string>
+    <string name="tvEmail">EMAIL</string>
+    <string name="txtEmail">Email</string>
+
 </resources>
