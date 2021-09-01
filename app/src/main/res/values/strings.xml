@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TP N°2 - Controles y almacenamiento interno</string>
+    <string name="app_name">Ejercicio controles</string>
     <string name="titulo">FORMULARIO DE CONTACTO</string>
     <string name="mensaje">Este es un formulario destinado al registro de personas, sus datos personales e intereses.</string>
     <string name="tvNombre">NOMBRE</string>

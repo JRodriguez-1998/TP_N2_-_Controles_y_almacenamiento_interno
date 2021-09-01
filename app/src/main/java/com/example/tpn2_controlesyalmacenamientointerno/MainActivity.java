@@ -3,6 +3,7 @@ package com.example.tpn2_controlesyalmacenamientointerno;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opciones);
         spinnerContacto.setAdapter(adapter);
         spinner2.setAdapter(adapter);
-
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu m){
+       getMenuInflater().inflate(R.menu.menu_activity,m);
+       return true;
     }
 }
