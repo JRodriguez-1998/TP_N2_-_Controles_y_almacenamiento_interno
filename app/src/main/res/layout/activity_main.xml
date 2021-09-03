@@ -32,8 +32,9 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
     <ScrollView
-        android:layout_width="416dp"
-        android:layout_height="358dp">
+        android:layout_width="match_parent"
+        android:layout_height="402dp"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,6 +140,56 @@
                 </TableRow>
 
             </TableLayout>
+
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvDireccion"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txtDireccion"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvFecha"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/txtFecha"
+                android:inputType="date"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                android:layout_width="208dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#3F51B5"
+                android:backgroundTint="#3F51B5"
+                android:onClick="SiguientePagina"
+                android:text="@string/btnContinuar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:iconTint="#3F51B5" />
 
         </LinearLayout>
     </ScrollView>

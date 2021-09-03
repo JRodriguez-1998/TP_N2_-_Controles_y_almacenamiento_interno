@@ -2,8 +2,10 @@ package com.example.tpn2_controlesyalmacenamientointerno;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         spinner2 = (Spinner) findViewById(R.id.spinner2);
 
         String []opciones = {"Casa", "Trabajo", "Móvil"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opciones);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item_teleymail, opciones);
         spinnerContacto.setAdapter(adapter);
         spinner2.setAdapter(adapter);
     }
@@ -35,5 +37,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu m){
        getMenuInflater().inflate(R.menu.menu_activity,m);
        return true;
+    }
+
+    public void SiguientePagina(View view){
+        Intent i = new Intent(this, MainActivity2.class);
+        startActivity(i);
     }
 }

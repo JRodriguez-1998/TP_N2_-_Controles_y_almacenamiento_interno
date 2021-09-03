@@ -11,4 +11,27 @@
     <string name="tvEmail">EMAIL</string>
     <string name="txtEmail">Email</string>
 
+    <string name="tvDireccion">DIRECCION</string>
+    <string name="txtDireccion">Direccion</string>
+    <string name="tvFecha">FECHA DE NACIMIENTO</string>
+    <string name="txtFecha">Fecha Nacimiento</string>
+    <string name="btnContinuar">Continuar</string>
+
+    <string name="mensaje2">A continuación, por favor se pide completar más datos adicionales.</string>
+    <string name="tvEstudios">NIVEL DE ESTUDIOS ALCANZADOS</string>
+    <string name="primarioIncompleto">Primario Incompleto</string>
+    <string name="primarioCompleto">Primario Completo</string>
+    <string name="secundarioIncompleto">Secundario Incompleto</string>
+    <string name="secundarioCompleto">Secundario Completo</string>
+    <string name="otros">Otros</string>
+
+    <string name="intereses">INTERESES</string>
+    <string name="deporte">Deporte</string>
+    <string name="musica">Musica</string>
+    <string name="arte">Arte</string>
+    <string name="tecnologia">Tecnología</string>
+
+    <string name="tvInfo">DESEA RECIBIR INFORMACIÓN ?</string>
+    <string name="si">Si</string>
+    <string name="btnGuardar">Guardar</string>
 </resources>
