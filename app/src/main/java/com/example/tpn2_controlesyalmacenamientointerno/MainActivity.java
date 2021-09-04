@@ -76,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void SiguientePagina(View view){
         Intent i = new Intent(this, MainActivity2.class);
+        i.putExtra("nombre",txtNombre.getText().toString());
+        i.putExtra("apellido",txtApellido.getText().toString());
+        i.putExtra("telefono",txtTelefono.getText().toString());
+        i.putExtra("email",txtEmail.getText().toString());
+        i.putExtra("direccion",txtDireccion.getText().toString());
+        i.putExtra("tipotel",spinnerContacto.getSelectedItem().toString());
+        i.putExtra("spinner2",spinner2.getSelectedItem().toString());
+        i.putExtra("fechanac",txtFechaNac.getText().toString());
+
         startActivity(i);
     }
 }
