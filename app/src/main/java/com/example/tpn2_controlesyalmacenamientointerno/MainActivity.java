@@ -14,6 +14,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,16 +77,22 @@ public class MainActivity extends AppCompatActivity {
        return true;
     }
 
-    public void SiguientePagina(View view){
+    public void SiguientePagina(View view) throws ParseException {
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+
+        Contacto contacto = new Contacto(
+                txtNombre.getText().toString(),
+                txtApellido.getText().toString(),
+                txtTelefono.getText().toString(),
+                spinnerContacto.getSelectedItem().toString(),
+                txtEmail.getText().toString(),
+                spinner2.getSelectedItem().toString(),
+                txtDireccion.getText().toString(),
+                formatter.parse(txtFechaNac.getText().toString())
+        );
+
         Intent i = new Intent(this, MainActivity2.class);
-        i.putExtra("nombre",txtNombre.getText().toString());
-        i.putExtra("apellido",txtApellido.getText().toString());
-        i.putExtra("telefono",txtTelefono.getText().toString());
-        i.putExtra("email",txtEmail.getText().toString());
-        i.putExtra("direccion",txtDireccion.getText().toString());
-        i.putExtra("tipotel",spinnerContacto.getSelectedItem().toString());
-        i.putExtra("spinner2",spinner2.getSelectedItem().toString());
-        i.putExtra("fechanac",txtFechaNac.getText().toString());
+        i.putExtra("contacto", contacto);
 
         startActivity(i);
     }
