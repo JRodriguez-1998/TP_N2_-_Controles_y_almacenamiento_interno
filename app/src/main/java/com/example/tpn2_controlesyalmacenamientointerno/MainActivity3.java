@@ -2,8 +2,12 @@ package com.example.tpn2_controlesyalmacenamientointerno;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -51,4 +55,36 @@ public class MainActivity3 extends AppCompatActivity {
         ArrayAdapter<Contacto> adapter = new ArrayAdapter<>(this, R.layout.list_item, listContactos);
         lv1.setAdapter(adapter);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu m){
+        getMenuInflater().inflate(R.menu.menu_activity,m);
+        return true;
+    }
+
+    public void ejecutar_opc1(View view){
+        Intent i= new Intent(this,MainActivity.class);
+        startActivity(i);
+    }
+    public void ejecutar_opc2(View view){
+        Intent i= new Intent(this,MainActivity3.class);
+        startActivity(i);
+    }
+
+
+    @Override
+    public  boolean onOptionsItemSelected(MenuItem opcion_menu){
+        int id=opcion_menu.getItemId();
+
+        if(id==R.id.opc1){
+            ejecutar_opc1(null);
+        }
+
+        if(id==R.id.opc2){
+            ejecutar_opc2(null);
+        }
+
+        return super.onOptionsItemSelected(opcion_menu);
+    }
+
 }
