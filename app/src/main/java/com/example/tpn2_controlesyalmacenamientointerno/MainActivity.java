@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+import android.util.Patterns;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,android.R.style.Theme_Holo_Dialog_MinWidth
                             ,setListener,anio,mes,dia);
                     datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                   datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
                     datePickerDialog.show();
                 }
             });
@@ -80,20 +83,31 @@ public class MainActivity extends AppCompatActivity {
     public void SiguientePagina(View view) throws ParseException {
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-        Contacto contacto = new Contacto(
-                txtNombre.getText().toString(),
-                txtApellido.getText().toString(),
-                txtTelefono.getText().toString(),
-                spinnerContacto.getSelectedItem().toString(),
-                txtEmail.getText().toString(),
-                spinner2.getSelectedItem().toString(),
-                txtDireccion.getText().toString(),
-                formatter.parse(txtFechaNac.getText().toString())
-        );
+        if(txtNombre.getText().toString().equals("") || txtApellido.getText().toString().equals("") || txtTelefono.getText().toString().equals("") || txtEmail.getText().toString().equals("") || txtDireccion.getText().toString().equals("") || txtFechaNac.getText().toString().equals("")){
+
+            Toast.makeText(this,"Campos incompletos, por favor ingrese todos los campos.", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            if(Patterns.EMAIL_ADDRESS.matcher(txtEmail.getText().toString()).matches()){
+            Contacto contacto = new Contacto(
+                    txtNombre.getText().toString(),
+                    txtApellido.getText().toString(),
+                    txtTelefono.getText().toString(),
+                    spinnerContacto.getSelectedItem().toString(),
+                    txtEmail.getText().toString(),
+                    spinner2.getSelectedItem().toString(),
+                    txtDireccion.getText().toString(),
+                    formatter.parse(txtFechaNac.getText().toString())
+            );
 
         Intent i = new Intent(this, MainActivity2.class);
         i.putExtra("contacto", contacto);
 
         startActivity(i);
+            }
+            else{
+            Toast.makeText(this,"Email ingresado invalido.",Toast.LENGTH_SHORT).show();
+            }
+    }
     }
 }

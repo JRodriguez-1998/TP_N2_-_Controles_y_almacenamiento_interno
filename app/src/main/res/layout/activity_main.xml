@@ -56,7 +56,8 @@
                 android:ems="10"
                 android:hint="@string/txtNombre"
                 android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
 
             <TextView
                 android:id="@+id/tvApellido"
@@ -73,7 +74,8 @@
                 android:ems="10"
                 android:hint="@string/txtApellido"
                 android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
 
             <TextView
                 android:id="@+id/tvTelefono"
@@ -98,7 +100,8 @@
                         android:ems="10"
                         android:hint="@string/txtTelefono"
                         android:inputType="number"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:digits="0123456789-"/>
 
                     <Spinner
                         android:id="@+id/spinnerTelefono"
