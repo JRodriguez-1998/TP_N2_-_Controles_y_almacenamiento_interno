@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -78,6 +79,31 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu m){
        getMenuInflater().inflate(R.menu.menu_activity,m);
        return true;
+    }
+
+    public void ejecutar_opc1(View view){
+        Intent i= new Intent(this,MainActivity.class);
+        startActivity(i);
+    }
+    public void ejecutar_opc2(View view){
+        Intent i= new Intent(this,MainActivity3.class);
+        startActivity(i);
+    }
+
+
+    @Override
+    public  boolean onOptionsItemSelected(MenuItem opcion_menu){
+        int id=opcion_menu.getItemId();
+
+        if(id==R.id.opc1){
+            ejecutar_opc1(null);
+        }
+
+        if(id==R.id.opc2){
+            ejecutar_opc2(null);
+        }
+
+        return super.onOptionsItemSelected(opcion_menu);
     }
 
     public void SiguientePagina(View view) throws ParseException {
