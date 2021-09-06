@@ -123,18 +123,6 @@ public class Contacto implements Serializable {
 
     @Override
     public String toString() {
-        return "Contacto{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", tipoTelefono=" + tipoTelefono +
-                ", email='" + email + '\'' +
-                ", tipoEmail=" + tipoEmail +
-                ", direccion='" + direccion + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", nivelEstudios=" + nivelEstudios +
-                ", intereses=" + intereses +
-                ", recibirInformacion=" + recibirInformacion +
-                '}';
+        return nombre + " " + apellido + " - " + email;
     }
 }
