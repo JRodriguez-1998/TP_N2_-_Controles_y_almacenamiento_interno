@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toast.makeText(this,"HOLA JUAN CARLOS !!!",Toast.LENGTH_LONG).show();
+
         txtNombre = (EditText) findViewById(R.id.txtNombre);
         txtApellido = (EditText) findViewById(R.id.txtApellido);
         txtTelefono = (EditText) findViewById(R.id.txtTelefono);
